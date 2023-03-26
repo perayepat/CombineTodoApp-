@@ -48,7 +48,6 @@ extension TodoListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             taskViewModel.deleteFiles(indexPath: indexPath.row)
-//            tableView.deleteRows(at: [indexPath], with: .fade)
         }
     }
     
