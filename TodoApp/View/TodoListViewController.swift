@@ -9,13 +9,16 @@ class TodoListViewController: UIViewController {
     
     var subscriptions = Set<AnyCancellable>()
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
         
         // add data stream that calls tableView.reloadData() when data changes
-        taskViewModel.tasks.sink { [unowned self] _ in
+        taskViewModel.tasks.sink { [unowned self] values in
          /// Whenever the tasks are sent down stream the view should update
+            print("receive values \(values)")
+            print("Table is reloading with : \(self.taskViewModel.tasks)")
             self.tableView.reloadData()
         }
         .store(in: &subscriptions)

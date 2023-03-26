@@ -15,6 +15,7 @@ class TaskListModel {
     // @Published var tasks = ["buy milk"]
     
     let tasks = CurrentValueSubject<[String], Never>(["buy milk"])
+
     var addNewTask = PassthroughSubject<String, Never>()
     
     var subscriptions = Set<AnyCancellable>()
@@ -33,6 +34,6 @@ class TaskListModel {
         // save changes to tasks in file system
         
         
-   
+        
     }
 }
