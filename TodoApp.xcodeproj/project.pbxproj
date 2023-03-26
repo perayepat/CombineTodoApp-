@@ -16,6 +16,8 @@
 		1781ED5325CC127D0037F3B9 /* AddNewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1781ED5225CC127D0037F3B9 /* AddNewViewController.swift */; };
 		1781ED5825CC17B40037F3B9 /* TaskListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1781ED5725CC17B40037F3B9 /* TaskListModel.swift */; };
 		1781ED5C25CC19110037F3B9 /* Publisher+uicontrol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1781ED5B25CC19110037F3B9 /* Publisher+uicontrol.swift */; };
+		436E7CC929D0B6BF009E277F /* FileManager+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436E7CC829D0B6BF009E277F /* FileManager+Extension.swift */; };
+		436E7CCB29D0B919009E277F /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436E7CCA29D0B919009E277F /* String+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		1781ED5225CC127D0037F3B9 /* AddNewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewViewController.swift; sourceTree = "<group>"; };
 		1781ED5725CC17B40037F3B9 /* TaskListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListModel.swift; sourceTree = "<group>"; };
 		1781ED5B25CC19110037F3B9 /* Publisher+uicontrol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Publisher+uicontrol.swift"; sourceTree = "<group>"; };
+		436E7CC829D0B6BF009E277F /* FileManager+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager+Extension.swift"; sourceTree = "<group>"; };
+		436E7CCA29D0B919009E277F /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +100,8 @@
 				1781ED5B25CC19110037F3B9 /* Publisher+uicontrol.swift */,
 				1781ED4025CC11F70037F3B9 /* Assets.xcassets */,
 				1781ED4225CC11F70037F3B9 /* LaunchScreen.storyboard */,
+				436E7CC829D0B6BF009E277F /* FileManager+Extension.swift */,
+				436E7CCA29D0B919009E277F /* String+Extension.swift */,
 			);
 			path = utilities;
 			sourceTree = "<group>";
@@ -178,11 +184,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				436E7CCB29D0B919009E277F /* String+Extension.swift in Sources */,
 				1781ED5825CC17B40037F3B9 /* TaskListModel.swift in Sources */,
 				1781ED3C25CC11F50037F3B9 /* TodoListViewController.swift in Sources */,
 				1781ED5C25CC19110037F3B9 /* Publisher+uicontrol.swift in Sources */,
 				1781ED3825CC11F50037F3B9 /* AppDelegate.swift in Sources */,
 				1781ED3A25CC11F50037F3B9 /* SceneDelegate.swift in Sources */,
+				436E7CC929D0B6BF009E277F /* FileManager+Extension.swift in Sources */,
 				1781ED5325CC127D0037F3B9 /* AddNewViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

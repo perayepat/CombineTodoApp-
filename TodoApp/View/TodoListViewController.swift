@@ -2,7 +2,7 @@ import UIKit
 import Combine
 
 class TodoListViewController: UIViewController {
-
+    
     // use viewmodel to populate table
     let taskViewModel  = TaskListModel()
     @IBOutlet weak var tableView: UITableView!
@@ -16,14 +16,14 @@ class TodoListViewController: UIViewController {
         
         // add data stream that calls tableView.reloadData() when data changes
         taskViewModel.tasks.sink { [unowned self] values in
-         /// Whenever the tasks are sent down stream the view should update
+            /// Whenever the tasks are sent down stream the view should update
             print("receive values \(values)")
-            print("Table is reloading with : \(self.taskViewModel.tasks)")
+//            print("Table is reloading with : \(self.taskViewModel.tasks)")
             self.tableView.reloadData()
         }
         .store(in: &subscriptions)
     }
-
+    
     @IBSegueAction func addNewViewIsGoingToAppear(_ coder: NSCoder) -> AddNewViewController? {
         let controller = AddNewViewController(coder: coder)
         // hande over viewmodel to controller
@@ -45,5 +45,11 @@ extension TodoListViewController: UITableViewDataSource {
         return cell
     }
     
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            taskViewModel.deleteFiles(indexPath: indexPath.row)
+//            tableView.deleteRows(at: [indexPath], with: .fade)
+        }
+    }
     
 }
